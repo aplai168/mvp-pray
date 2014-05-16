@@ -1,88 +1,97 @@
-# Angular 
+# Angular and Single Page Aplications (SPA)
 
-In this section, we're going to be ripping out our backbone work for Shortly and replace it with Angular. Your goal is to learn the basics of Angular, including how to test and debug your code.
+In this section, we're going to be ripping out our backbone work for Shortly and replace it with Angular. Your goal is to learn the basics of Angular and how a SPA works, including how to test and debug your code.
 
-##What exactly is Angular?
-* An opensource framework maintained by Google and the community. Angular tries to make it easy to build single page applications by taking a very opinionated approach compared to other MVC's such as Backbone. Because of this, Angular is less flexible, but makes it very simple to create common features needed in a web app. It uses depenedency injection
+## What exactly is Angular?
 
-###Things convered in the sprint
-* Controllers
-* Modules
-* $scopes
-* Routing & multiple views
-* Factories
-* Promises
-* Filters
+An opensource framework maintained by Google and the community. Angular tries to make it easy to build single page applications by taking a very opinionated approach compared to other MVC's such as Backbone. Because of this, Angular is less flexible, but makes it very simple to create common features needed in a web app. It uses a modies version of Jquery called jQLite that assits with DOM manipulation.
 
+### Things convered in the sprint
+
+  - Controllers
+  - Modules
+  - $scopes
+  - Routing & multiple views
+  - Factories
+  - Promises
+  - Filters
+
+## What is a SPA?
+
+- A single page application varies differently than a traditional web app. The server does not render any views, it only serves the index.html, static assets, and maybe act as a RESTFUL JSON API. Once the idnex.html is loaded, all templating and routing sis handled by front-end javaScript frameworks like Angular.
+
+## Gulp
+
+- Last sprint you learned about Grunt and how to setup and use automated tasks to speed up your workflow. Gulp does the same thig just in a different way. Gulp is based off of Node streams and has a more natural feel when using Node. Gulp is quickly becoming the go to when using task runners. The community has built amaing plugins to provide the same fuctionalty you got when using Grunt plugins. You only need one, Gulp or Grunt. They both solve the same problem, just in two different ways.
 
 ## What's in this repo?
-* Skeleton structure for your client, nothing in the files.
+
+- Express sever (very similar to your shortly-deploy server)
+  - Connected to MongoDB
+  - Authentication disabled
+  - removal of EJS templating
+  
+- Gulpfile (similar to Gruntfile when using Grunt)
+  - instrictions for all your tasks
+
+- Angular
+  - Basic angular depenedencies
+  - index.html file
 
 
-##Getting Started
+To ease development of your Angular app,  __authentication has been disabled__,during the initial development phase.
 
-###Reference material:
+## Reference material:
 
-[Getting started series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html). Go through these steps to get familiar with Angular.
-
-To ease development of your Angular app,  you should __disable authentication__ during the initial development phase. Check the extra credit.
-
-* [ ] Add one of your last sprints (express+bookshelf or express+mongo)into this one
-* [ ] delete all Backbone code and dependencies
-* [ ] run `bower install` to install angular dependencies
-* [ ] Although Angular does not need EJS or any server side rendering, setup your `layout.ejs` to load Angular dependencies.
-* [ ] Erase the contents of your  `layout.ejs` file and load up Angular with `ng-app`.
-* [ ] disable authentication on your server.
-
+[Getting started series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
 
 ## Your Goals
 
-###Basic requirements:
+### Basic requirements:
 
 - Create a basic shortly app
-  * [ ] Build the listing view
-  * [ ] Build the shorten view
-  * [ ] Enable navigation between views using [ngRoute and the $routeProvider]()
+  - [ ] Build the listing view
+  - [ ] Build the shorten view
+  - [ ] Enable navigation between views using [ngRoute and the $routeProvider]()
 
 - Validations
-  * [ ] [Validate](https://docs.angularjs.org/api/ng/directive/input) the shorten links form before it submits to the server.
+  - [ ] [Validate](https://docs.angularjs.org/api/ng/directive/input) the shorten links form before it submits to the server.
 
 - Sorting and filtering:
-  * [ ] Display the links on the listing page sorted by visit count
-  * [ ] Add a live-search box that displays only the links that match the search criteria 
-  * [ ] Allow the user to sort by other criteria, such as last visited time (hottest), latest (created_at), or visit count (populate)
+  - [ ] Display the links on the listing page sorted by visit count
+  - [ ] Add a live-search box that displays only the links that match the search criteria 
+  - [ ] Allow the user to sort by other criteria, such as last visited time (hottest), latest (created_at), or visit count (populate)
 
 - Testing
-  * [ ] Use karma to set up unit tests to test your factories and controllers
-  * [ ] Use karma to set up end-to-end tests to test the flow of your Shortly
+  - [ ] Use karma to set up unit tests to test your factories and controllers
+  - [ ] Use karma to set up end-to-end tests to test the flow of your Shortly
 
-###Extra Credit:
+### Extra Credit:
+
 - Enable client-side authentication system
-  * [ ] Require users to log in to see shortened links using $http interceptors
-  * [ ] Allow users to register through the front-end
-  * [ ] Save the user's info in a cookie and automatically log them back in when they return
+  - [ ] Require users to log in to see shortened links using $http interceptors
+  - [ ] Allow users to register through the front-end
+  - [ ] Save the user's info in a cookie and automatically log them back in when they return
 
 - Alerts:
-  * [ ] Build a directive to display errors gracefully on the page
-
-- Look & Feel
-  * [ ] Upgrade your UI wnd style with a CSS library like:(Foundation, Twitter Bootstrap)
-  * [ ] Add animations to views & elements with [ngAnimate](https://docs.angularjs.org/api/ngAnimate) and [ng-Fx](https://github.com/Hendrixer/ng-Fx)
+  - [ ] Build a directive to display errors gracefully on the page
 
 - Optimization:
-  * [ ] Use caching and localstorage to optimize the flow of the application and to limit the number of calls to make to the backend
+  - [ ] Use caching and localstorage to optimize the flow of the application and to limit the number of calls to make to the backend
 
+- Touch
+  - [ ] Touch-enable your Shortly application
 
-###Nightmare Mode
+- Look & Feel
+  - [ ] Upgrade your UI wnd style with a CSS library like:(Foundation, Twitter Bootstrap)
+  - [ ] Add animations to views & elements with [ngAnimate](https://docs.angularjs.org/api/ngAnimate) and [ng-Fx](https://github.com/Hendrixer/ng-Fx)
+
+### Nightmare Mode
+
 - Routing 
-  * [ ] Strip out ngRoute and use [ui-router](https://github.com/angular-ui/ui-router) 
-    * ngRoute only allows one instance of the `ng-view` directive, meaing only view can be rendered at a time. ngRoute also relies on the url using `$urlProvider` to determine what view should be loaded. `ui-router` fixes this by associating views with state. The url will no longer determine what template we can load. You will then have the ability to load as many templates as you'd like, even nest them using the `$stateProvider`. 
-    
+  - [ ] Strip out ngRoute and use [ui-router](https://github.com/angular-ui/ui-router) elaborate here
 - Widgets
-  * [ ] Use a custom directive to display your links. ex: `<shortend-link> </shortened-link>`
-    * Right now you probably have all your links listed as `<li>` elements on the page, refactor this an create a custom directive to display each link instead. A shortend link widget.
-  * [ ] Have the link animate on hover.
-  
+  - [ ] Use a custom directive to display your links. ex: `<shortend-link> </shortened-link>`
 - Views
-  * [ ] create a stats view for each of your links
-  * [ ] display a d3 graph that shows the link's stats
+  - [ ] create a stats view for each of your links
+  - [ ] display a d3 graph that shows the link's stats
