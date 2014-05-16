@@ -30,7 +30,7 @@ To ease development of your Angular app,  you should __disable authentication__ 
 * [ ] Add one of your last sprints (express+bookshelf or express+mongo)into this one
 * [ ] delete all Backbone code and dependencies
 * [ ] run `bower install` to install angular dependencies
-* [ ] Although Angular does not need EJR or any server side rendering, setup your `layout.ejs` to load Angular dependencies.
+* [ ] Although Angular does not need EJS or any server side rendering, setup your `layout.ejs` to load Angular dependencies.
 * [ ] Erase the contents of your  `layout.ejs` file and load up Angular with `ng-app`.
 * [ ] disable authentication on your server.
 
