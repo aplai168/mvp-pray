@@ -20,9 +20,6 @@ An opensource framework maintained by Google and the community. Angular tries to
 
 - A single page application varies differently than a traditional web app. The server does not render any views, it only serves the index.html, static assets, and maybe act as a RESTFUL JSON API. Once the idnex.html is loaded, all templating and routing sis handled by front-end javaScript frameworks like Angular.
 
-## Gulp
-
-- Last sprint you learned about Grunt and how to setup and use automated tasks to speed up your workflow. Gulp does the same thig just in a different way. Gulp is based off of Node streams and has a more natural feel when using Node. Gulp is quickly becoming the go to when using task runners. The community has built amaing plugins to provide the same fuctionalty you got when using Grunt plugins. You only need one, Gulp or Grunt. They both solve the same problem, just in two different ways.
 
 ## What's in this repo?
 
@@ -39,11 +36,11 @@ An opensource framework maintained by Google and the community. Angular tries to
   - index.html file
 
 
-To ease development of your Angular app,  __authentication has been disabled__,during the initial development phase.
+To ease development of your Angular app,  __disable authentication on the server__, during the initial development phase.
 
 ## Reference material:
 
-[Getting started series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
+### [Getting started series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
 
 ## Your Goals
 
@@ -90,6 +87,7 @@ To ease development of your Angular app,  __authentication has been disabled__,d
 
 - Routing 
   - [ ] Strip out ngRoute and use [ui-router](https://github.com/angular-ui/ui-router) elaborate here
+
 - Widgets
   - [ ] Use a custom directive to display your links. ex: `<shortend-link> </shortened-link>`
 - Views
