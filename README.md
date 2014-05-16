@@ -16,14 +16,23 @@ In this section, we're going to be ripping out our backbone work for Shortly and
 
 
 ## What's in this repo?
-* Skeleton structure for your client, nothing in the files
+* Skeleton structure for your client, nothing in the files.
 
 
-To ease development of your Angular app,  you should __disable authentication__during the initial development phase. Check the extra credit.
+##Getting Started
 
-## Reference material:
+###Reference material:
 
-[Getting started series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
+[Getting started series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html). Go through these steps to get familiar with Angular.
+
+To ease development of your Angular app,  you should __disable authentication__ during the initial development phase. Check the extra credit.
+
+* [ ] Add one of your last sprints (express+bookshelf or express+mongo)into this one
+* [ ] delete all Backbone code and dependencies
+* [ ] run `bower install` to install angular dependencies
+* [ ] Although Angular does not need EJR or any server side rendering, setup your `layout.ejs` to load Angular dependencies.
+* [ ] Erase the contents of your  `layout.ejs` file and load up Angular with `ng-app`.
+
 
 ## Your Goals
 
@@ -67,10 +76,12 @@ To ease development of your Angular app,  you should __disable authentication__d
 - Routing 
   * [ ] Strip out ngRoute and use [ui-router](https://github.com/angular-ui/ui-router) 
     * ngRoute only allows one instance of the `ng-view` directive, meaing only view can be rendered at a time. ngRoute also relies on the url using `$urlProvider` to determine what view should be loaded. `ui-router` fixes this by associating views with state. The url will no longer determine what template we can load. You will then have the ability to load as many templates as you'd like, even nest them using the `$stateProvider`. 
+    
 - Widgets
   * [ ] Use a custom directive to display your links. ex: `<shortend-link> </shortened-link>`
     * Right now you probably have all your links listed as `<li>` elements on the page, refactor this an create a custom directive to display each link instead. A shortend link widget.
   * [ ] Have the link animate on hover.
+  
 - Views
   * [ ] create a stats view for each of your links
   * [ ] display a d3 graph that shows the link's stats
