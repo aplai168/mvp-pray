@@ -115,6 +115,7 @@ To ease development of your Angular app,  __disable authentication on the server
 
 - Create a basic shortly app
   * [ ] Enable navigation between the links view and shorten view
+  * [ ] Default to links view if an unknown route is attempted
 
 - Validations
   * [ ] Validate the shorten links form before it submits to the server.
