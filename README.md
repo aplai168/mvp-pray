@@ -99,6 +99,7 @@ To ease development of your Angular app,  __disable authentication on the server
 * [ ] run `npm install -g gulp karma karma-cli` global modules
 * [ ] run `npm install` all node depenencies are listed in the package.json
 * [ ] run `bower install` all client dependencies are listed in the bower.json
+* [ ] in seperate tab in your terminal run `mongod` to start mongo up
 * [ ] run `gulp` to start our server and app
 * [ ] run `gulp karma` to run all yuor test
 
