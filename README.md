@@ -28,7 +28,7 @@ In this section, we're going to be ripping out our backbone work for Shortly and
 * Gulp is a task runner that will make your life easier. So easy. You just tell it what to do, and it'll do it. For this repo, Gulp will start your node server with nodemon, it will also watch for any changes to your client side files and refresh the browser automagically for you using live reload. To learn more, look at the material list below and read the comments in `Gulpfile.js`
 
 ##Express archtecture
-* Version 4 removes almost all dependencies on `connect`. Which means you'll have to manually install popular middlware like `body-parser`. Also, Express 4 introduces mini-routers, allowing us to have seperate configurations mapping to different routes. Check out how the server is organized and read the comments to get a feel of what is happening.
+* Version 4 removes almost all dependencies on `connect`. Which means you'll have to manually install popular middlware like `body-parser`. Also, Express 4 introduces mini-routers, allowing us to have seperate configurations mapping to different routes. Check out how the server is organized and read the comments in `server/server.js` to get a feel for it.
 
 ## Reference material:
 * [Getting started with Angualr series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
