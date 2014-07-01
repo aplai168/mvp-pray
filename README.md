@@ -3,88 +3,93 @@
 In this section, we're going to be ripping out our backbone work for Shortly and replace it with Angular. Your goal is to learn the basics of Angular and how a SPA works, including how to test and debug your code.
 
 ##What exactly is Angular?
-* An opensource framework maintained by Google and the community. Angular tries to make it easy to build single page applications by taking a very opinionated approach compared to other MVC's such as Backbone. Because of this, Angular is less flexible, but makes it very simple to create common features needed in a web app. It uses a modies version of Jquery called jQLite that assits with DOM manipulation.
+* An opensource framework maintained by Google and the community. Angular tries to make it easy to build single page applications by taking a very opinionated approach compared to other MVC's such as Backbone.
 
 ###Things convered in the sprint
-* Controllers
+* Controllers & $scope
 * Modules
-* $scopes
 * Routing & multiple views
-* Factories
+* Factories & Services
+* Directives
 * Promises
 * Filters
 
 ##What is a SPA?
-* A single page application varies differently than a traditional web app. The server does not render any views, it only serves the index.html, static assets, and maybe act as a RESTFUL JSON API. Once the idnex.html is loaded, all templating and routing sis handled by front-end javaScript frameworks like Angular.
+* A single page application varies differently than a traditional web app. The server does not render any views, it only serves the index.html, static assets, and maybe act as a RESTFUL JSON API. Once the index.html is loaded, all templating and routing is handled by front-end javaScript frameworks like Angular.
+
+##Token based authentication
+* Instead of using sessions and having our server keep track of the current user, this server uses tokens. To be exact, JSON web tokens or JWT, pronounced jot. The client stores the token and must send the token on every request that wants access to a protected endpoint. The server knows nothing of the current users. 
+
+##Mongo
+* Mongo is a No-SQL database. It does not require schemas and was built entirely in JavaScript. This server uses Mongo and an ORM called Mongoose, instead of Bookshelf and sql-lite.
 
 ##Gulp
-* Last sprint you learned about Grunt and how to setup and use automated tasks to speed up your workflow. Gulp does the same thig just in a different way. Gulp is based off of Node streams and has a more natural feel when using Node. Gulp is quickly becoming the go to when using task runners. The community has built amaing plugins to provide the same fuctionalty you got when using Grunt plugins. You only need one, Gulp or Grunt. They both solve the same problem, just in two different ways.
+* Gulp is based off of Node streams and has a more natural feel when using Node. Gulp is quickly becoming the go to when using task runners. The community has built amaing plugins to provide the same fuctionalty you got when using Grunt plugins. You only need one, Gulp or Grunt. They both solve the same problem, just in two different ways.
 
 ## What's in this repo?
-* Express sever (very similar to your shortly-deploy server)
+* Express 4 sever
   - Connected to MongoDB
-  - Authentication disabled
+  - Authentication disabled by default
   - removal of EJS templating
   
-* Gulpfile (similar to Gruntfile when using Grunt)
-  - instrictions for all your tasks
+* Gulpfile
+  - instructions for all your tasks
 
-* Angular
-  - Basic angular depenedencies
-  - index.html file
+* Skeleton app
+  - All the files needed for your angular app is there
 
+* Client and Server testing
 
 To ease development of your Angular app,  __authentication has been disabled__,during the initial development phase.
 
 ## Reference material:
-
-[Getting started series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
+* [Getting started series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
+* [Cookies vs JWT](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/)
+* [Factories & Services](http://stackoverflow.com/questions/14324451/angular-service-vs-angular-factory)
+* [Routing with ngRoute](http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating)
+* 
 
 ## Your Goals
 
 ###Basic requirements:
+- Testing
+  * [ ] Pass all test
 
 - Create a basic shortly app
-  * [ ] Build the listing view
+  * [ ] Build the links view
   * [ ] Build the shorten view
-  * [ ] Enable navigation between views using [ngRoute and the $routeProvider]()
+  * [ ] Enable navigation between views using ngRoute and ngView
 
 - Validations
-  * [ ] [Validate](https://docs.angularjs.org/api/ng/directive/input) the shorten links form before it submits to the server.
+  * [ ] [Validate](https://docs.angularjs.org/api/ng/input/input%5Burl%5D) the shorten links form before it submits to the server.
 
 - Sorting and filtering:
   * [ ] Display the links on the listing page sorted by visit count
   * [ ] Add a live-search box that displays only the links that match the search criteria 
-  * [ ] Allow the user to sort by other criteria, such as last visited time (hottest), latest (created_at), or visit count (populate)
 
-- Testing
-  * [ ] Use karma to set up unit tests to test your factories and controllers
-  * [ ] Use karma to set up end-to-end tests to test the flow of your Shortly
 
 ###Extra Credit:
 - Enable client-side authentication system
-  * [ ] Require users to log in to see shortened links using $http interceptors
+  * [ ] Enable authentication
+      * uncomment line 20 in `server/config/middleware.js`
+  * [ ] Add front-end route protection inside the `.run()` in `client/app/app.js`
   * [ ] Allow users to register through the front-end
-  * [ ] Save the user's info in a cookie and automatically log them back in when they return
+  * [ ] Save the user's token in localStorage and automatically log them back in when they return
 
-- Alerts:
-  * [ ] Build a directive to display errors gracefully on the page
+- Widgets
+  * [ ] Use a custom directive to display your links. ex: `<shortend-link> </shortened-link>`
 
 - Optimization:
   * [ ] Use caching and localstorage to optimize the flow of the application and to limit the number of calls to make to the backend
 
-- Touch
-  * [ ] Touch-enable your Shortly application
 
 - Look & Feel
-  * [ ] Upgrade your UI wnd style with a CSS library like:(Foundation, Twitter Bootstrap)
+  * [ ] Upgrade your UI wnd style with a CSS library
   * [ ] Add animations to views & elements with [ngAnimate](https://docs.angularjs.org/api/ngAnimate) and [ng-Fx](https://github.com/Hendrixer/ng-Fx)
 
 ###Nightmare Mode
 - Routing 
   * [ ] Strip out ngRoute and use [ui-router](https://github.com/angular-ui/ui-router) elaborate here
-- Widgets
-  * [ ] Use a custom directive to display your links. ex: `<shortend-link> </shortened-link>`
 - Views
   * [ ] create a stats view for each of your links
   * [ ] display a d3 graph that shows the link's stats
