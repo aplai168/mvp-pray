@@ -87,14 +87,14 @@ In this section, we're going to be ripping out our backbone work for Shortly and
 
 ###Extra Credit:
 - Look & Feel
-  * [ ] Upgrade your UI wnd style with a CSS library
+  * [ ] Upgrade your UI and style with a CSS library
   * [ ] Add animations to views & elements with [ngAnimate](https://docs.angularjs.org/api/ngAnimate) and [ng-Fx](https://github.com/Hendrixer/ng-Fx)
 
 - Widgets
   * [ ] Use a custom directive to display your links. ex: `<shortend-link> </shortened-link>`
 
 - Routing 
-  * [ ] Strip out ngRoute and use [ui-router](https://github.com/angular-ui/ui-router) ui-router is the standard. The angular team did not create ui-router but it is better in many ways compared to ngRoute. The biggest advantage is the ability to have multiple and nested views.
+  * [ ] Strip out ngRoute and use [ui-router](https://github.com/angular-ui/ui-router) . ui-router is the standard. The angular team did not create ui-router but it is better in many ways compared to ngRoute. The biggest advantage is the ability to have multiple and nested views.
 
 - Testing
   * Create e2e test using Protractor
@@ -107,4 +107,9 @@ In this section, we're going to be ripping out our backbone work for Shortly and
 - UI
   * [ ] Look up [WebComponents and Polymer](http://www.polymer-project.org/docs/start/tutorial/intro.html)
   * [ ] Incorporate [Polymer Paper elements](http://www.polymer-project.org/docs/elements/) into your UI or create your own.
+  
+- Feature
+  * [ ] Allow users to sign in with github
+  * [ ] Create a relationship between links and users witn the mongoose schemas
+  * [ ] Links view should only fetch links for the current signed in user, not all links
 
