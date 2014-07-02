@@ -1,11 +1,9 @@
 # Angular and Single Page Aplications (SPA)
 
-In this section, we're going to be ripping out our backbone work for Shortly and replace it with Angular. Your goal is to learn the basics of Angular and how a SPA works, including how to test and debug your code.
-
-##What exactly is Angular?
+## What exactly is Angular?
 * An opensource framework maintained by Google and the community. Angular tries to make it easy to build single page applications by taking a very opinionated approach compared to other MVC's such as Backbone.
 
-###Things convered in the sprint
+### Things convered in the sprint
 * Controllers & $scope
 * Modules
 * Routing & multiple views
@@ -15,19 +13,19 @@ In this section, we're going to be ripping out our backbone work for Shortly and
 * Filters
 * Testing with Karma
 
-##What is a SPA?
+## What is a SPA?
 * A single page application varies differently than a traditional web app. The server does not render any views, it only serves the index.html, static assets, and maybe act as a RESTFUL JSON API. Once the index.html is loaded, all templating and routing is handled by front-end javaScript frameworks like Angular.
 
-##Token based authentication
+## Token based authentication
 * Instead of using sessions and having our server keep track of the current user, this server uses tokens. To be exact, JSON web tokens or JWT, pronounced jot. The client stores the token and must send the token on every request that wants access to a protected endpoint. The server knows nothing of the current users. 
 
-##Mongo
+## Mongo
 * Mongo is a No-SQL database. It does not require schemas and was built entirely in JavaScript. This server uses Mongo and an ORM called Mongoose, instead of Bookshelf and sql-lite.
 
-##Gulp
+## Gulp
 * Gulp is a task runner that will make your life easier. So easy. You just tell it what to do, and it'll do it. For this repo, Gulp will start your node server with nodemon, it will also watch for any changes to your client side files and refresh the browser automagically for you using live reload. To learn more, look at the material list below and read the comments in `Gulpfile.js`
 
-##Express archtecture
+## Express archtecture
 * Version 4 removes almost all dependencies on `connect`. Which means you'll have to manually install popular middlware like `body-parser`. Also, Express 4 introduces mini-routers, allowing us to have seperate configurations mapping to different routes. Check out how the server is organized and read the comments in `server/server.js` to get a feel for it.
 
 ## Reference material:
@@ -66,7 +64,7 @@ In this section, we're going to be ripping out our backbone work for Shortly and
 
 ## Your Goals
 
-###Basic requirements:
+### Basic requirements:
 - Tests
   + to run test use `gulp karma` in your terminal
   * [ ] Build out LinksController and template
@@ -87,7 +85,7 @@ In this section, we're going to be ripping out our backbone work for Shortly and
   * [ ] Display the links on the listing page sorted by visit count
   * [ ] Add a live-search box that displays only the links that match the search criteria 
 
-###Extra Credit:
+### Extra Credit:
 - Look & Feel
   * [ ] Upgrade your UI and style with a CSS library
   * [ ] Add animations to views & elements with [ngAnimate](https://docs.angularjs.org/api/ngAnimate) and [ng-Fx](https://github.com/Hendrixer/ng-Fx)
@@ -101,7 +99,7 @@ In this section, we're going to be ripping out our backbone work for Shortly and
 - Testing
   * Create e2e test using Protractor
 
-###Nightmare Mode
+### Nightmare Mode
 - Views
   * [ ] create a detailed stats view for each of your links
   * [ ] display a d3 graph that shows the link's stats
@@ -111,6 +109,6 @@ In this section, we're going to be ripping out our backbone work for Shortly and
   * [ ] Incorporate [Polymer Paper elements](http://www.polymer-project.org/docs/elements/) into your UI or create your own.
   
 - Feature
-  * [ ] Allow users to sign in with github
-  * [ ] Create a relationship between links and users witn the mongoose schemas
+  * [ ] Allow users to sign in with github using passport with JWTs.
+  * [ ] Create a relationship between links and users with the mongoose schemas
   * [ ] Links view should only fetch links for the current signed in user, not all links
