@@ -1,7 +1,8 @@
-# Angular and Single Page Aplications (SPA)
 
-## What exactly is Angular?
-* An opensource framework maintained by Google and the community. Angular tries to make it easy to build single page applications by taking a very opinionated approach compared to other MVC's such as Backbone.
+# Angular and Single Page Applications (SPA)
+
+##What exactly is Angular?
+* An open source framework maintained by Google and the community. Angular tries to make it easy to build single page applications by taking a very opinionated approach compared to other MVC's such as Backbone.
 
 ### Things convered in the sprint
 * Controllers & $scope
@@ -25,11 +26,11 @@
 ## Gulp
 * Gulp is a task runner that will make your life easier. So easy. You just tell it what to do, and it'll do it. For this repo, Gulp will start your node server with nodemon, it will also watch for any changes to your client side files and refresh the browser automagically for you using live reload. To learn more, look at the material list below and read the comments in `Gulpfile.js`
 
-## Express archtecture
-* Version 4 removes almost all dependencies on `connect`. Which means you'll have to manually install popular middlware like `body-parser`. Also, Express 4 introduces mini-routers, allowing us to have seperate configurations mapping to different routes. Check out how the server is organized and read the comments in `server/server.js` to get a feel for it.
+##Express architecture
+* Version 4 removes almost all dependencies on `connect`. Which means you'll have to manually install popular middleware like `body-parser`. Also, Express 4 introduces mini-routers, allowing us to have separate configurations mapping to different routes. Check out how the server is organized and read the comments in `server/server.js` to get a feel for it.
 
 ## Reference material:
-* [Getting started with Angualr series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
+* [Getting started with Angular series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
 * [Angular form validation](http://scotch.io/tutorials/javascript/angularjs-form-validation)
 * [Intro to Gulp](http://closurelog.com/getting-started-gulp/)
 * [What is JWT](http://www.sitepoint.com/using-json-web-tokens-node-js/)
@@ -56,11 +57,11 @@
 
 ## Installing dependencies and Getting started
 * [ ] run `npm install -g gulp karma karma-cli nodemon` global modules
-* [ ] run `npm install` all node depenencies are listed in the package.json
+* [ ] run `npm install` all node dependencies are listed in the package.json
 * [ ] run `bower install` all client dependencies are listed in the bower.json
-* [ ] in seperate tab in your terminal run `mongod` to start mongo up
+* [ ] in separate tab in your terminal run `mongod` to start mongo up
 * [ ] run `gulp` to start our server and app
-* [ ] run `gulp karma` to run all yuor test
+* [ ] run `gulp karma` to run all your test
 
 ## Your Goals
 
@@ -78,7 +79,7 @@
 
 - Validations
   * [ ] Validate the shorten links form before it submits to the server.
-  * [ ] Validate signup and singin forms before it submits to the server.
+  * [ ] Validate sign up and sing in forms before it submits to the server.
   * [ ] Show errors when forms are invalid 
 
 - Sorting and filtering:
