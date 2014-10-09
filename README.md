@@ -24,7 +24,7 @@
 * Mongo is a No-SQL database. It does not require schemas and was built entirely in JavaScript. This server uses Mongo and an ORM called Mongoose, instead of Bookshelf and sql-lite.
 
 ## Gulp
-* Gulp is a task runner that will make your life easier. So easy. You just tell it what to do, and it'll do it. For this repo, Gulp will start your node server with nodemon, it will also watch for any changes to your client side files and refresh the browser automagically for you using live reload. To learn more, look at the material list below and read the comments in `Gulpfile.js`
+* Gulp is a task runner that will make your life easier. So easy. You just tell it what to do, and it'll do it. For this repo, Gulp will start your node server with nodemon, it will also watch for any changes to your client side files and refresh the browser automagically for you using browser-sync (you may have to manually refresh the browser the first time browser-sync launches). To learn more, look at the material list below and read the comments in `Gulpfile.js`
 
 ##Express architecture
 * Version 4 removes almost all dependencies on `connect`. Which means you'll have to manually install popular middleware like `body-parser`. Also, Express 4 introduces mini-routers, allowing us to have separate configurations mapping to different routes. Check out how the server is organized and read the comments in `server/server.js` to get a feel for it.
