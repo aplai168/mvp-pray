@@ -61,13 +61,13 @@
 * [ ] run `bower install` all client dependencies are listed in the bower.json
 * [ ] in separate tab in your terminal run `mongod` to start mongo up
 * [ ] run `gulp` to start our server and app
-* [ ] run `gulp karma` to run all your test
+* [ ] run `gulp test` to run all your test
 
 ## Your Goals
 
 ### Basic requirements:
 - Tests
-  + to run test use `gulp karma` in your terminal
+  + to run test use `gulp test` in your terminal
   * [ ] Build out LinksController and template
   * [ ] Build out ShortenController and template
   * [ ] Build out Links service
