@@ -18,7 +18,7 @@
 * A single page application varies differently than a traditional web app. The server does not render any views, it only serves the index.html, static assets, and maybe act as a RESTFUL JSON API. Once the index.html is loaded, all templating and routing is handled by front-end javaScript frameworks like Angular.
 
 ## Token based authentication
-* Instead of using sessions and having our server keep track of the current user, this server uses tokens. To be exact, JSON web tokens or JWT, pronounced jot. The client stores the token and must send the token on every request that wants access to a protected endpoint. The server knows nothing of the current users. 
+* Instead of using sessions and having our server keep track of the current user, this server uses tokens. To be exact, JSON web tokens or JWT, pronounced jot. The client stores the token and must send the token on every request that wants access to a protected endpoint. The server knows nothing of the current users.
 
 ## Mongo
 * Mongo is a No-SQL database. It does not require schemas and was built entirely in JavaScript. This server uses Mongo and an ORM called Mongoose, instead of Bookshelf and sql-lite.
@@ -46,7 +46,7 @@
   - Connected to MongoDB using Mongoose
   - removal of EJS templating and sessions
   - JWT for authentication
-  
+
 * Gulpfile
   - instructions for all your tasks
 
@@ -67,7 +67,7 @@
 
 ### Basic requirements:
 - Tests
-  + to run test use `gulp test` in your terminal
+  + to run test use `gulp karma` in your terminal
   * [ ] Build out LinksController and template
   * [ ] Build out ShortenController and template
   * [ ] Build out Links service
@@ -80,11 +80,11 @@
 - Validations
   * [ ] Validate the shorten links form before it submits to the server.
   * [ ] Validate sign up and sing in forms before it submits to the server.
-  * [ ] Show errors when forms are invalid 
+  * [ ] Show errors when forms are invalid
 
 - Sorting and filtering:
   * [ ] Display the links on the listing page sorted by visit count
-  * [ ] Add a live-search box that displays only the links that match the search criteria 
+  * [ ] Add a live-search box that displays only the links that match the search criteria
 
 ### Extra Credit:
 - Look & Feel
@@ -94,7 +94,7 @@
 - Widgets
   * [ ] Use a custom directive to display your links. ex: `<shortend-link> </shortened-link>`
 
-- Routing 
+- Routing
   * [ ] Strip out ngRoute and use [ui-router](https://github.com/angular-ui/ui-router) . ui-router is the standard. The angular team did not create ui-router but it is better in many ways compared to ngRoute. The biggest advantage is the ability to have multiple and nested views.
 
 - Testing
@@ -108,7 +108,7 @@
 - UI
   * [ ] Look up [WebComponents and Polymer](http://www.polymer-project.org/docs/start/tutorial/intro.html)
   * [ ] Incorporate [Polymer Paper elements](http://www.polymer-project.org/docs/elements/) into your UI or create your own.
-  
+
 - Feature
   * [ ] Allow users to sign in with github using passport with JWTs.
   * [ ] Create a relationship between links and users with the mongoose schemas
