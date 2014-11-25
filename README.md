@@ -4,7 +4,7 @@
 ##What exactly is Angular?
 * An open source framework maintained by Google and the community. Angular tries to make it easy to build single page applications by taking a very opinionated approach compared to other MVC's such as Backbone.
 
-### Things convered in the sprint
+### Things covered in the sprint
 * Controllers & $scope
 * Modules
 * Routing & multiple views
