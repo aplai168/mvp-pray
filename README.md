@@ -89,6 +89,10 @@
   * [ ] Display the links on the listing page sorted by visit count
   * [ ] Add a live-search box that displays only the links that match the search criteria
 
+### Example:
+
+![Project Demo Image](./example.gif)
+
 ### Extra Credit:
 - Look & Feel
   * [ ] Upgrade your UI and style with a CSS library
