@@ -91,7 +91,7 @@
 
 ### Example:
 
-![Project Demo Image](./example.gif)
++![Project Demo Image](https://cloud.githubusercontent.com/assets/15180/5589465/4f24c206-90d4-11e4-8466-68e9fa0e77ce.gif)
 
 ### Extra Credit:
 - Look & Feel
