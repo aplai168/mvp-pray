@@ -61,7 +61,7 @@ gulp.task('styles', function () {
     .pipe(refresh(client));
 });
 
-// watch all our client code and force a refersh when they change
+// watch all our client code and force a refresh when they change
 gulp.task('watch', function () {
   gulp.watch(paths.scripts, ['lint']);
   gulp.watch(paths.html, ['html']);
