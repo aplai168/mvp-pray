@@ -35,7 +35,10 @@
 ## Reference material:
 * [Getting started with Angular series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
 * [Angular form validation](http://scotch.io/tutorials/javascript/angularjs-form-validation)
+<<<<<<< HEAD
 * [Intro to Gulp](http://markgoodyear.com/2014/01/getting-started-with-gulp/)
+=======
+>>>>>>> 6c399dc42eb27e33272b4b036dc603748b5cf7ca
 * [What is JWT](http://www.sitepoint.com/using-json-web-tokens-node-js/)
 * [Cookies vs JWT in Angular](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/)
 * [Factories & Services](http://stackoverflow.com/questions/14324451/angular-service-vs-angular-factory)
@@ -91,7 +94,7 @@
 
 ### Example:
 
-![Project Demo Image](./example.gif)
++![Project Demo Image](https://cloud.githubusercontent.com/assets/15180/5589465/4f24c206-90d4-11e4-8466-68e9fa0e77ce.gif)
 
 ### Extra Credit:
 - Look & Feel

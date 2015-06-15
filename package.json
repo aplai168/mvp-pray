@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "karma start --browsers PhantomJS"
+    "test": "karma start karma.conf.js",
+    "start": "gulp"
   },
   "author": "",
   "license": "ISC",
