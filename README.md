@@ -34,13 +34,13 @@
 
 ## Reference material:
 * [Getting started with Angular series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
-* [Angular form validation](http://scotch.io/tutorials/javascript/angularjs-form-validation)
+* [Angular form validation](https://scotch.io/tutorials/angularjs-form-validation)
 * [Intro to Gulp](http://markgoodyear.com/2014/01/getting-started-with-gulp/)
 * [What is JWT](http://www.sitepoint.com/using-json-web-tokens-node-js/)
 * [Cookies vs JWT in Angular](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/)
 * [Factories & Services](http://stackoverflow.com/questions/14324451/angular-service-vs-angular-factory)
 * [Routing with ngRoute](http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating)
-* [What's new in Express 4](http://closurelog.com/whats-new-express-4/)
+* [What's new in Express 4](https://scotch.io/bar-talk/expressjs-4-0-new-features-and-upgrading-from-3-0)
 * [e2e testing with Protractor](http://www.ng-newsletter.com/posts/practical-protractor.html)
 
 
