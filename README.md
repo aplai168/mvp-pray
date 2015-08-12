@@ -68,7 +68,7 @@
 
 ## Your Goals
 
-### Basic requirements:
+### Bare Minimum requirements:
 - Tests
   + to run test use `gulp karma` in your terminal
   * [ ] Build out LinksController and template
@@ -93,7 +93,7 @@
 
 +![Project Demo Image](https://cloud.githubusercontent.com/assets/15180/5589465/4f24c206-90d4-11e4-8466-68e9fa0e77ce.gif)
 
-### Extra Credit:
+### Advanced
 - Look & Feel
   * [ ] Upgrade your UI and style with a CSS library
   * [ ] Add animations to views & elements with [ngAnimate](https://docs.angularjs.org/api/ngAnimate) and [ng-Fx](https://github.com/Hendrixer/ng-Fx)
