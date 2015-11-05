@@ -29,10 +29,13 @@
 ## Gulp
 * Gulp is a task runner that will make your life easier. So easy. You just tell it what to do, and it'll do it. For this repo, Gulp will start your node server with nodemon, it will also watch for any changes to your client side files and refresh the browser automagically for you using browser-sync (you may have to manually refresh the browser the first time browser-sync launches). To learn more, look at the material list below and read the comments in `Gulpfile.js`
 
-##Express architecture
+## Express architecture
 * Version 4 removes almost all dependencies on `connect`. Which means you'll have to manually install popular middleware like `body-parser`. Also, Express 4 introduces mini-routers, allowing us to have separate configurations mapping to different routes. Check out how the server is organized and read the comments in `server/server.js` to get a feel for it.
 
-## Reference material:
+## Style guide enforcement
+* [JSCS](http://jscs.info/) is a popular JavaScript code style linter. This repo contains a dotfile, `.jscsrc`, that configures JSCS to enforce the Hack Reactor style guide. Using the `pre-commit` npm module, this repo will run JSCS against against the code in the repository, and fail the commit if there are any errors, or, any violations of the style guide. Commit your work frequently to prevent having to do too much clean up at once.
+
+## Reference material
 * [Getting started with Angular series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
 * [Angular form validation](https://scotch.io/tutorials/angularjs-form-validation)
 * [Intro to Gulp](http://markgoodyear.com/2014/01/getting-started-with-gulp/)
@@ -59,7 +62,7 @@
 * Client test
 
 ## Installing dependencies and Getting started
-* [ ] run `npm install -g gulp karma karma-cli nodemon` global modules
+* [ ] run `npm install -g gulp karma karma-cli nodemon jscs` global modules
 * [ ] run `npm install` all node dependencies are listed in the package.json
 * [ ] run `bower install` all client dependencies are listed in the bower.json
 * [ ] in separate tab in your terminal run `mongod` to start mongo up
@@ -68,7 +71,7 @@
 
 ## Your Goals
 
-### Bare Minimum requirements:
+### Bare Minimum requirements
 - Tests
   + to run test use `gulp karma` in your terminal
   * [ ] Build out LinksController and template
@@ -89,7 +92,7 @@
   * [ ] Display the links on the listing page sorted by visit count
   * [ ] Add a live-search box that displays only the links that match the search criteria
 
-### Example:
+### Example
 
 +![Project Demo Image](https://cloud.githubusercontent.com/assets/15180/5589465/4f24c206-90d4-11e4-8466-68e9fa0e77ce.gif)
 
