@@ -33,7 +33,7 @@
 * Version 4 removes almost all dependencies on `connect`. Which means you'll have to manually install popular middleware like `body-parser`. Also, Express 4 introduces mini-routers, allowing us to have separate configurations mapping to different routes. Check out how the server is organized and read the comments in `server/server.js` to get a feel for it.
 
 ## Style guide enforcement
-* [JSCS](http://jscs.info/) is a popular JavaScript code style linter. This repo contains a dotfile, `.jscsrc`, that configures JSCS to enforce the Hack Reactor style guide. Using the `pre-commit` npm module, this repo will run JSCS against against the code in the repository, and fail the commit if there are any errors, or, any violations of the style guide. Commit your work frequently to prevent having to do too much clean up at once.
+* [JSCS](http://jscs.info/) is a popular JavaScript code style linter. This repo contains a dotfile, `.jscsrc`, that configures JSCS to enforce the Hack Reactor style guide. Using the `pre-commit` npm module, this repo will run JSCS against the code in the repository, and fail the commit if there are any errors, or, any violations of the style guide. Commit your work frequently to prevent having to do too much clean up at once.
 
 ## Reference material
 * [Getting started with Angular series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
