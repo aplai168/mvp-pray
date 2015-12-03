@@ -53,21 +53,23 @@ An open source framework maintained by Google and the community. Angular tries t
   - Removal of EJS templating and sessions
   - JWT for authentication
 
+* Skeleton Angular App
+  - All the files and folders needed for your Angular app
+
 * Gulpfile
   - Instructions for running all your tasks
-
-* Skeleton app
-  - All the files and folders needed for your Angular app
 
 * Client tests
 
 ## Installing dependencies and Getting started
 * [ ] run `npm install -g gulp karma karma-cli nodemon jscs` global modules
 * [ ] run `npm install` all node dependencies are listed in the package.json
-* [ ] run `bower install` all client dependencies are listed in the bower.json
+* [ ] run `bower install` all client dependencies are listed in the bower.json*
 * [ ] in separate tab in your terminal run `mongod` to start mongo up
 * [ ] run `gulp` to start our server and app
 * [ ] run `gulp karma` to run all your test
+
+*The `.bowerrc` dotfile exists to configure bower's behavior for this sprint. Inside `.bowerrc`, the `directory` property is a path, relative to `bower.json`, where bower will install libraries in during `bower install`. This technique is particularly useful for this app because the server sends only the `client` directory to the browser. This means when scripts are loaded and executed in `index.html`, their paths must be defined relative to the `client` directory. `index.html` will know nothing about the files/folders that exist as parents/siblings to `client`, such as `node_modules` and `server`. Therefore, in order for `index.html` to load our libraries correctly, we must make sure they get installed somewhere inside the `client` directory, in this case `client/lib`. This is a common pattern for single page applications that contain both a client and server in the same repo.
 
 ## Your Goals
 
