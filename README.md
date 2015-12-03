@@ -2,10 +2,10 @@
 # Angular and Single Page Applications (SPA)
 
 ##What exactly is Angular?
-* An open source framework maintained by Google and the community. Angular tries to make it easy to build single page applications by taking a very opinionated approach compared to other MVC's such as Backbone.
+An open source framework maintained by Google and the community. Angular tries to make it easy to build single page applications by taking a very opinionated approach compared to other MVC's such as Backbone.
 
-### Things covered in the sprint
-* Controllers & $scope
+### Concepts covered in the sprint
+* Controllers & `$scope`
 * Modules
 * Routing & multiple views
 * Factories & Services
@@ -30,7 +30,7 @@
 * Gulp is a task runner that will make your life easier. So easy. You just tell it what to do, and it'll do it. For this repo, Gulp will start your node server with nodemon, it will also watch for any changes to your client side files and refresh the browser automagically for you using browser-sync (you may have to manually refresh the browser the first time browser-sync launches). To learn more, look at the material list below and read the comments in `Gulpfile.js`
 
 ## Express architecture
-* Version 4 removes almost all dependencies on `connect`. Which means you'll have to manually install popular middleware like `body-parser`. Also, Express 4 introduces mini-routers, allowing us to have separate configurations mapping to different routes. Check out how the server is organized and read the comments in `server/server.js` to get a feel for it.
+* Version 4 removes almost all dependencies on `connect`. Which means you'll have to manually install popular middleware like `body-parser`. All middleware can be found in `server/config/middlware.js` and all API endpoints can be found in `server/config/routes.js`.
 
 ## Style guide enforcement
 * [JSCS](http://jscs.info/) is a popular JavaScript code style linter. This repo contains a dotfile, `.jscsrc`, that configures JSCS to enforce the Hack Reactor style guide. Using the `pre-commit` npm module, this repo will run JSCS against the code in the repository, and fail the commit if there are any errors, or, any violations of the style guide. Commit your work frequently to prevent having to do too much clean up at once.
@@ -50,16 +50,16 @@
 ## What's in this repo?
 * Express 4 sever
   - Connected to MongoDB using Mongoose
-  - removal of EJS templating and sessions
+  - Removal of EJS templating and sessions
   - JWT for authentication
 
 * Gulpfile
-  - instructions for running all your tasks
+  - Instructions for running all your tasks
 
 * Skeleton app
-  - All the files and folders needed for your angular app
+  - All the files and folders needed for your Angular app
 
-* Client test
+* Client tests
 
 ## Installing dependencies and Getting started
 * [ ] run `npm install -g gulp karma karma-cli nodemon jscs` global modules
@@ -72,20 +72,20 @@
 ## Your Goals
 
 ### Bare Minimum requirements
-- Tests
-  + to run test use `gulp karma` in your terminal
-  * [ ] Build out LinksController and template
-  * [ ] Build out ShortenController and template
-  * [ ] Build out Links service
+- Tests. Run them with `gulp karma`
+  * [ ] Build out `Links` service
+  * [ ] Build out `LinksController` and template
+  * [ ] Build out `ShortenController` and template
   * [ ] Add routing for both Links and Shorten templates
 
-- Create a basic shortly app
+- Navigation
   * [ ] Enable navigation between the links view and shorten view
-  * [ ] Default to links view if an unknown route is attempted
+  * [ ] Enable authentication for the links view and shorten view
+  * [ ] Default to links view if an unknown client-side route is attempted
 
 - Validations
   * [ ] Validate the shorten links form before it submits to the server.
-  * [ ] Validate sign up and sing in forms before it submits to the server.
+  * [ ] Validate sign up and sign in forms before it submits to the server.
   * [ ] Show errors when forms are invalid
 
 - Sorting and filtering:
@@ -113,16 +113,15 @@ Our advanced content is intended to throw you in over your head, requiring you t
 - Testing
   * Create e2e test using Protractor
 
-### Nightmare Mode
 - Views
   * [ ] create a detailed stats view for each of your links
   * [ ] display a d3 graph that shows the link's stats
 
 - UI
-  * [ ] Look up [WebComponents and Polymer](http://www.polymer-project.org/docs/start/tutorial/intro.html)
-  * [ ] Incorporate [Polymer Paper elements](http://www.polymer-project.org/docs/elements/) into your UI or create your own.
+  * [ ] Look up [Google Material Design](https://www.google.com/design/spec/material-design/introduction.html)
+  * [ ] Incorporate [Material Design elements](https://material.angularjs.org/latest/) into your UI or create your own.
 
-- Feature
+- More features
   * [ ] Allow users to sign in with github using passport with JWTs.
   * [ ] Create a relationship between links and users with the mongoose schemas
   * [ ] Links view should only fetch links for the current signed in user, not all links
