@@ -4,25 +4,9 @@ var Link = require('./linkModel.js');
 
 
 module.exports = {
-  findUrl: function (req, res, next, code) {
-    var findLink = Q.nbind(Link.findOne, Link);
-    findLink({code: code})
-      .then(function (link) {
-        if (link) {
-          req.navLink = link;
-          next();
-        } else {
-          next(new Error('Link not added yet'));
-        }
-      })
-      .fail(function (error) {
-        next(error);
-      });
-  },
 
   allLinks: function (req, res, next) {
   var findAll = Q.nbind(Link.find, Link);
-
   findAll({})
     .then(function (links) {
       res.json(links);
@@ -34,7 +18,6 @@ module.exports = {
 
   newLink: function (req, res, next) {
     var url = req.body.url;
-    console.log(req.body);
     if (!util.isValidUrl(url)) {
       return next(new Error('Not a valid url'));
     }
@@ -72,15 +55,25 @@ module.exports = {
   },
 
   navToLink: function (req, res, next) {
-    var link = req.navLink;
-    link.visits++;
-    link.save(function (err, savedLink) {
-      if (err) {
-        next(err);
-      } else {
-        res.redirect(savedLink.url);
-      }
-    });
+    var findLink = Q.nbind(Link.findOne, Link);
+    findLink({code: req.params.code})
+      .then(function (link) {
+        if (!link) {
+          return next(new Error('Link not added yet'));
+        }
+
+        link.visits++;
+        link.save(function (err, savedLink) {
+          if (err) {
+            next(err);
+          } else {
+            res.redirect(savedLink.url);
+          }
+        });
+      })
+      .fail(function (error) {
+        next(error);
+      });
   }
 
 };
