@@ -44,6 +44,7 @@ An open source framework maintained by Google and the community. Angular tries t
 * [Factories & Services](http://stackoverflow.com/questions/14324451/angular-service-vs-angular-factory)
 * [Routing with ngRoute](http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating)
 * [What's new in Express 4](https://scotch.io/bar-talk/expressjs-4-0-new-features-and-upgrading-from-3-0)
+* [Testing Angular](http://angularclass.github.io/angular-testing-quick-start-guide/)
 * [e2e testing with Protractor](http://www.ng-newsletter.com/posts/practical-protractor.html)
 
 
