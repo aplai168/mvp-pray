@@ -1,17 +1,19 @@
-  var express = require('express');
-  var mongoose = require('mongoose');
+var express = require('express');
+var mongoose = require('mongoose');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost/shortly'); // connect to mongo database named shortly
+// connect to mongo database named "shortly"
+mongoose.connect('mongodb://localhost/shortly');
 
-// configure our server with all the middleware and and routing
+// configure our server with all the middleware and routing
 require('./config/middleware.js')(app, express);
+require('./config/routes.js')(app, express);
 
-// export our app for testing and flexibility, required by index.js
-
+// start listening to requests on port 8000
 app.listen(8000);
 
+// export our app for testing and flexibility, required by index.js
 module.exports = app;
 
 
