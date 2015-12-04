@@ -13,7 +13,7 @@ angular.module('shortly.services', [])
     });
   };
 
-  var addLink = function (link) {
+  var addOne = function (link) {
     return $http({
       method: 'POST',
       url: '/api/links',
@@ -23,7 +23,7 @@ angular.module('shortly.services', [])
 
   return {
     getAll: getAll,
-    addLink: addLink
+    addOne: addOne
   };
   /* END SOLUTION */
 })
