@@ -1,12 +1,9 @@
 'use strict';
 
 var gulp = require('gulp');
+var sync = require('browser-sync');
 var nodemon = require('gulp-nodemon');
-var bs = require('browser-sync');
-var reload = bs.reload;
-var when = require('gulp-if');
-var shell = require('gulp-shell');
-
+var KarmaServer = require('karma').Server;
 
 // the paths to our app files
 var paths = {
@@ -21,7 +18,7 @@ var paths = {
 // client side code will automagically refresh your page
 // with the new changes
 gulp.task('start', ['serve'], function () {
-  bs({
+  sync({
     notify: true,
     // address for server,
     injectChanges: true,
@@ -30,9 +27,12 @@ gulp.task('start', ['serve'], function () {
   });
 });
 
-gulp.task('karma', shell.task([
-  'karma start'
-]));
+// Run our karma tests
+gulp.task('karma', function (done) {
+  new KarmaServer({
+    configFile: __dirname + '/karma.conf.js'
+  }, done).start();
+});
 
 // start our node server using nodemon
 gulp.task('serve', function () {
