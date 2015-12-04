@@ -38,44 +38,45 @@ An open source framework maintained by Google and the community. Angular tries t
 ## Reference material
 * [Getting started with Angular series](http://www.ng-newsletter.com/posts/beginner2expert-how_to_start.html)
 * [Angular form validation](https://scotch.io/tutorials/angularjs-form-validation)
-* [Intro to Gulp](http://markgoodyear.com/2014/01/getting-started-with-gulp/)
-* [What is JWT](http://www.sitepoint.com/using-json-web-tokens-node-js/)
-* [Cookies vs JWT in Angular](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/)
 * [Factories & Services](http://stackoverflow.com/questions/14324451/angular-service-vs-angular-factory)
 * [Routing with ngRoute](http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating)
-* [What's new in Express 4](https://scotch.io/bar-talk/expressjs-4-0-new-features-and-upgrading-from-3-0)
-* [Testing Angular](http://angularclass.github.io/angular-testing-quick-start-guide/)
+* [Todd Motto's Style Guide](https://github.com/toddmotto/angularjs-styleguide)
+* [John Papa's Style Guide](https://github.com/johnpapa/angular-styleguide)
+* [Unit testing](http://angularclass.github.io/angular-testing-quick-start-guide/)
 * [e2e testing with Protractor](http://www.ng-newsletter.com/posts/practical-protractor.html)
+* [What's new in Express 4](https://scotch.io/bar-talk/expressjs-4-0-new-features-and-upgrading-from-3-0)
+* [What is JWT](http://www.sitepoint.com/using-json-web-tokens-node-js/)
+* [Cookies vs JWT in Angular](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/)
+* [Intro to Gulp](http://markgoodyear.com/2014/01/getting-started-with-gulp/)
 
 
 ## What's in this repo?
-* Express 4 sever
-  - Connected to MongoDB using Mongoose
-  - Removal of EJS templating and sessions
-  - JWT for authentication
+Skeleton Angular app
+  * All the files and folders needed for your Angular app
+  * Tests for the controllers/services you'll build
 
-* Skeleton Angular App
-  - All the files and folders needed for your Angular app
+Express 4 sever
+  * Connected to MongoDB using Mongoose
+  * Removal of EJS templating and sessions
+  * JWT for authentication
 
-* Gulpfile
-  - Instructions for running all your tasks
-
-* Client tests
+Gulpfile
+  * Instructions for running all your tasks
 
 ## Installing dependencies and Getting started
 * [ ] run `npm install -g gulp karma karma-cli nodemon jscs` global modules
 * [ ] run `npm install` all node dependencies are listed in the package.json
 * [ ] run `bower install` all client dependencies are listed in the bower.json*
-* [ ] in separate tab in your terminal run `mongod` to start mongo up
+* [ ] in a separate tab in your terminal, run `mongod` to start mongo up
 * [ ] run `gulp` to start our server and app
-* [ ] run `gulp karma` to run all your test
+* [ ] in another separate tab, run `gulp karma` to run all your test
 
 *The `.bowerrc` dotfile exists to configure bower's behavior for this sprint. Inside `.bowerrc`, the `directory` property is a path, relative to `bower.json`, where bower will install libraries in during `bower install`. This technique is particularly useful for this app because the server sends only the `client` directory to the browser. This means when scripts are loaded and executed in `index.html`, their paths must be defined relative to the `client` directory. `index.html` will know nothing about the files/folders that exist as parents/siblings to `client`, such as `node_modules` and `server`. Therefore, in order for `index.html` to load our libraries correctly, we must make sure they get installed somewhere inside the `client` directory, in this case `client/lib`. This is a common pattern for single page applications that contain both a client and server in the same repo.
 
 ## Your Goals
 
 ### Bare Minimum requirements
-- Tests. Run them with `gulp karma`
+- Pass the tests. Run them with `gulp karma`
   * [ ] Build out `Links` service
   * [ ] Build out `LinksController` and template
   * [ ] Build out `ShortenController` and template
@@ -91,7 +92,7 @@ An open source framework maintained by Google and the community. Angular tries t
   * [ ] Validate sign up and sign in forms before it submits to the server.
   * [ ] Show errors when forms are invalid
 
-- Sorting and filtering:
+- Sorting and filtering
   * [ ] Display the links on the listing page sorted by visit count
   * [ ] Add a live-search box that displays only the links that match the search criteria
 
@@ -103,26 +104,25 @@ An open source framework maintained by Google and the community. Angular tries t
 
 Our advanced content is intended to throw you in over your head, requiring you to solve problems with very little support or oversight, much like you would as a mid or senior level engineer.
 
-- Look & Feel
+- Deep Dive into Angular
+  * [ ] Use a custom directive to display your links. ex: `<shortend-link> </shortened-link>`
+  * [ ] Strip out ngRoute and use [ui-router](https://github.com/angular-ui/ui-router) . ui-router is the standard. The angular team did not create ui-router but it is better in many ways compared to ngRoute. The biggest advantage is the ability to have multiple and nested views.
+  * [ ] Refactor your controllers to use the [`controllerAs`](https://github.com/johnpapa/angular-styleguide#controllers) syntax. This technique is often used because it hides some complexity of `$scope` and feels more like vanilla JavaScript.
+
+- UI/UX
+  * [ ] Display a spinner (there's one in `assets/`) to your users while they're waiting for a new link to be created.
   * [ ] Upgrade your UI and style with a CSS library
   * [ ] Add animations to views & elements with [ngAnimate](https://docs.angularjs.org/api/ngAnimate) and [ng-Fx](https://github.com/Hendrixer/ng-Fx)
-
-- Widgets
-  * [ ] Use a custom directive to display your links. ex: `<shortend-link> </shortened-link>`
-
-- Routing
-  * [ ] Strip out ngRoute and use [ui-router](https://github.com/angular-ui/ui-router) . ui-router is the standard. The angular team did not create ui-router but it is better in many ways compared to ngRoute. The biggest advantage is the ability to have multiple and nested views.
+  * [ ] Look up [Google Material Design](https://www.google.com/design/spec/material-design/introduction.html)
+  * [ ] Incorporate [Material Design elements](https://material.angularjs.org/latest/) into your UI or create your own.
 
 - Testing
   * Create e2e test using Protractor
 
+### Nightmare Mode
 - Views
   * [ ] create a detailed stats view for each of your links
   * [ ] display a d3 graph that shows the link's stats
-
-- UI
-  * [ ] Look up [Google Material Design](https://www.google.com/design/spec/material-design/introduction.html)
-  * [ ] Incorporate [Material Design elements](https://material.angularjs.org/latest/) into your UI or create your own.
 
 - More features
   * [ ] Allow users to sign in with github using passport with JWTs.
