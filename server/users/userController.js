@@ -2,12 +2,14 @@ var User = require('./userModel.js');
     Q = require('q');
     jwt = require('jwt-simple');
 
+var findUser = Q.denodify(User.findOne, User);
+var createUser = Q.denodify(User.create, User);
+
 module.exports = {
   signin: function (req, res, next) {
     var username = req.body.username;
     var password = req.body.password;
 
-    var findUser = Q.nbind(User.findOne, User);
     findUser({username: username})
       .then(function (user) {
         if (!user) {
@@ -32,24 +34,18 @@ module.exports = {
   signup: function (req, res, next) {
     var username = req.body.username;
     var password = req.body.password;
-    var create;
-    var newUser;
-
-    var findOne = Q.nbind(User.findOne, User);
 
     // check to see if user already exists
-    findOne({username: username})
+    findUser({username: username})
       .then(function (user) {
         if (user) {
           next(new Error('User already exist!'));
         } else {
           // make a new user if not one
-          create = Q.nbind(User.create, User);
-          newUser = {
+          return createUser({
             username: username,
             password: password
-          };
-          return create(newUser);
+          });
         }
       })
       .then(function (user) {
@@ -72,7 +68,6 @@ module.exports = {
       next(new Error('No token'));
     } else {
       var user = jwt.decode(token, 'secret');
-      var findUser = Q.nbind(User.findOne, User);
       findUser({username: user.username})
         .then(function (foundUser) {
           if (foundUser) {
