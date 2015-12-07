@@ -1,3 +1,5 @@
+'use strict';
+
 describe('ShortenController', function () {
   var $scope, $rootScope, $location, createController, $httpBackend, Links;
 

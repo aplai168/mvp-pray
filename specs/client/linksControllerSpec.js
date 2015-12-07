@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 describe('LinksController', function () {
   var $scope, $rootScope, createController, Links, $httpBackend;
