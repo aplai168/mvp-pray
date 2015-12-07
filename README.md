@@ -96,7 +96,10 @@
 
 +![Project Demo Image](https://cloud.githubusercontent.com/assets/15180/5589465/4f24c206-90d4-11e4-8466-68e9fa0e77ce.gif)
 
-### Advanced
+### Advanced Content
+
+Our advanced content is intended to throw you in over your head, requiring you to solve problems with very little support or oversight, much like you would as a mid or senior level engineer.
+
 - Look & Feel
   * [ ] Upgrade your UI and style with a CSS library
   * [ ] Add animations to views & elements with [ngAnimate](https://docs.angularjs.org/api/ngAnimate) and [ng-Fx](https://github.com/Hendrixer/ng-Fx)
