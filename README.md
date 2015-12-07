@@ -91,6 +91,7 @@ Sorting and filtering
 Our advanced content is intended to throw you in over your head, requiring you to solve problems with very little support or oversight, much like you would as a mid or senior level engineer.
 
 Deep Dive into Angular
+  * [ ] Take advantage of the `resolve` feature of ng-router to make the initialization in your `LinksController` easier
   * [ ] Use a custom directive to display your links. ex: `<shortend-link> </shortened-link>`
   * [ ] Strip out ngRoute and use [ui-router](https://github.com/angular-ui/ui-router) . ui-router is the standard. The angular team did not create ui-router but it is better in many ways compared to ngRoute. The biggest advantage is the ability to have multiple and nested views.
   * [ ] Refactor your controllers to use the [`controllerAs`](https://github.com/johnpapa/angular-styleguide#controllers) syntax. This technique is often used because it hides some complexity of `$scope` and feels more like vanilla JavaScript.
@@ -103,17 +104,21 @@ UI/UX
   * [ ] Incorporate [Material Design elements](https://material.angularjs.org/latest/) into your UI or create your own.
 
 Testing
-  * Create e2e test using Protractor
+  * Write tests for the `Auth` service. Follow the existing structure outlined for the `Links` service test, and consult [this guide](http://angularclass.github.io/angular-testing-quick-start-guide/) for further guidance
 
 ### Nightmare Mode
 Views
-  * [ ] create a detailed stats view for each of your links
-  * [ ] display a d3 graph that shows the link's stats
+  * [ ] Create a detailed stats view for each of your links
+  * [ ] Display a d3 graph that shows the link's stats
 
 More features
-  * [ ] Allow users to sign in with github using passport with JWTs.
+  * [ ] Allow users to sign in with GitHub using passport with JWTs.
   * [ ] Create a relationship between links and users with the mongoose schemas
   * [ ] Links view should only fetch links for the current signed in user, not all links
+
+Testing
+  * [ ] Write unit tests for any new features you write
+  * [ ] Create end to end tests using Protractor
 
 
 ## Reference material
