@@ -7,7 +7,7 @@ module.exports = function (config) {
     basePath: './',
 
     // testing frameworks to use
-    frameworks: ['jasmine'],
+    frameworks: ['mocha', 'chai', 'sinon'],
 
     // list of files / patterns to load in the browser. order matters!
     files: [
@@ -20,7 +20,6 @@ module.exports = function (config) {
       'client/app/**/*.js',
 
       // our spec files - in order of the README
-      'node_modules/expect.js/index.js',
       'specs/client/authControllerSpec.js',
       'specs/client/servicesSpec.js',
       'specs/client/linksControllerSpec.js',

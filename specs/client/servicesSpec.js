@@ -22,11 +22,11 @@ describe('Services', function () {
     });
 
     it('should have a method `getAll`', function () {
-      expect(Links.getAll).to.be.a(Function);
+      expect(Links.getAll).to.be.a('function');
     });
 
     it('should have a method `addOne`', function () {
-      expect(Links.addOne).to.be.a(Function);
+      expect(Links.addOne).to.be.a('function');
     });
 
     it('should get all links with `getAll`', function () {
@@ -40,7 +40,7 @@ describe('Services', function () {
       $httpBackend.expect('GET', '/api/links').respond(mockResponse);
 
       Links.getAll().then(function (links) {
-        expect(links).to.eql(mockResponse);
+        expect(links).to.deep.equal(mockResponse);
       });
 
       $httpBackend.flush();
@@ -57,16 +57,12 @@ describe('Services', function () {
         });
 
       Links.addOne(github).then(function (resp) {
-        expect(resp.status).to.be(201);
-        expect(resp.data.title).to.be('Hack Reactor Labs');
+        expect(resp.status).to.equal(201);
+        expect(resp.data.title).to.equal('Hack Reactor Labs');
       });
 
       $httpBackend.flush();
     });
-
-  });
-
-  describe('Auth Factory', function () {
 
   });
 
