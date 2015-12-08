@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 describe('LinksController', function () {
   var $scope, $rootScope, createController, Links, $httpBackend;
@@ -22,6 +22,7 @@ describe('LinksController', function () {
         Links: Links
       });
     };
+
   }));
 
   it('should have a data property on the $scope', function () {
@@ -29,15 +30,24 @@ describe('LinksController', function () {
     expect($scope.data).to.be.an('object');
   });
 
-  it('should have a getLinks method on the $scope', function () {
-    createController();
-    expect($scope.getLinks).to.be.a('function');
-  });
-  it('should call getLinks() when controller is loaded', function () {
-    var mockLinks = [{},{},{}];
-    $httpBackend.expectGET("/api/links").respond(mockLinks);
+  it('should call `Links.getAll()` when controller is loaded', function () {
+    sinon.spy(Links, 'getAll');
+    $httpBackend.expectGET('/api/links').respond(200);
+
     createController();
     $httpBackend.flush();
-    expect($scope.data.links).to.eql(mockLinks);
+
+    expect(Links.getAll.called).to.equal(true);
+    Links.getAll.restore();
+  });
+
+  it('should populate the data property after the call to `Links.getAll()`', function () {
+    var mockLinks = [{},{},{}];
+    $httpBackend.expectGET('/api/links').respond(mockLinks);
+
+    createController();
+    $httpBackend.flush();
+
+    expect($scope.data.links).to.deep.equal(mockLinks);
   });
 });

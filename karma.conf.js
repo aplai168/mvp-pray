@@ -1,5 +1,4 @@
 // Karma configuration
-// Generated on Mon Jun 30 2014 19:35:20 GMT-0700 (PDT)
 
 module.exports = function (config) {
   config.set({
@@ -7,13 +6,10 @@ module.exports = function (config) {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: './',
 
+    // testing frameworks to use
+    frameworks: ['mocha', 'chai', 'sinon'],
 
-    // frameworks to use
-    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
-
-
-    // list of files / patterns to load in the browser
+    // list of files / patterns to load in the browser. order matters!
     files: [
       // angular source
       'client/lib/angular/angular.js',
@@ -23,54 +19,25 @@ module.exports = function (config) {
       // our app code
       'client/app/**/*.js',
 
-      // our spec files
-      'node_modules/expect.js/index.js',
-      'specs/client/**/*.js'
+      // our spec files - in order of the README
+      'specs/client/authControllerSpec.js',
+      'specs/client/servicesSpec.js',
+      'specs/client/linksControllerSpec.js',
+      'specs/client/shortenControllerSpec.js',
+      'specs/client/routingSpec.js'
     ],
-
-
-    // list of files to exclude
-    exclude: [
-        'karma.conf.js'
-    ],
-
-
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-
-    },
-
 
     // test results reporter to use
-    // possible values: 'dots', 'progress'
-    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: ['nyan','unicorn'],
 
-
-    // web server port
-    port: 9876,
-
-
-    // enable / disable colors in the output (reporters and logs)
-    colors: true,
-
-
-    // level of logging
-    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
-
+    // start these browsers. PhantomJS will load up in the background
+    browsers: ['PhantomJS'],
 
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: false,
 
-
-    // start these browsers
-    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'PhantomJS'],
-
-    // Continuous Integration mode
-    // if true, Karma captures browsers, runs the tests and exits
+    // if true, Karma exits after running the tests.
     singleRun: true
+
   });
 };

@@ -1,3 +1,5 @@
+'use strict';
+
 describe('AuthController', function () {
   var $scope, $rootScope, $location, $window, $httpBackend, createController, Auth;
 
@@ -47,7 +49,7 @@ describe('AuthController', function () {
     $httpBackend.expectPOST('/api/users/signup').respond({token: token});
     $scope.signup();
     $httpBackend.flush();
-    expect($window.localStorage.getItem('com.shortly')).to.be(token);
+    expect($window.localStorage.getItem('com.shortly')).to.equal(token);
   });
 
   it('should have a signin method', function () {
@@ -60,6 +62,6 @@ describe('AuthController', function () {
     $httpBackend.expectPOST('/api/users/signin').respond({token: token});
     $scope.signin();
     $httpBackend.flush();
-    expect($window.localStorage.getItem('com.shortly')).to.be(token);
+    expect($window.localStorage.getItem('com.shortly')).to.equal(token);
   });
 });

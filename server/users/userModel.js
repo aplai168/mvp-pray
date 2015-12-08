@@ -1,6 +1,6 @@
+var Q = require('q');
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
-var Q = require('q');
 var SALT_WORK_FACTOR = 10;
 
 
@@ -19,16 +19,16 @@ var UserSchema = new mongoose.Schema({
 });
 
 UserSchema.methods.comparePasswords = function (candidatePassword) {
-  var defer = Q.defer();
   var savedPassword = this.password;
-  bcrypt.compare(candidatePassword, savedPassword, function (err, isMatch) {
-    if (err) {
-      defer.reject(err);
-    } else {
-      defer.resolve(isMatch);
-    }
+  return Q.Promise(function (resolve, reject) {
+    bcrypt.compare(candidatePassword, savedPassword, function (err, isMatch) {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(isMatch);
+      }
+    });
   });
-  return defer.promise;
 };
 
 UserSchema.pre('save', function (next) {

@@ -1,28 +1,28 @@
-var morgan = require('morgan'); // used for logging incoming request
+var morgan = require('morgan');
 var bodyParser = require('body-parser');
-var helpers = require('./helpers.js'); // our custom middleware
 
+// Middleware can be thought of as a magical pipe that water flows through.
+// Each drop of water starts at the top opening of the pipe. As it falls through,
+// a magic spell is cast on it, and then it is spit out the bottom of the pipe
+// where another magical pipe could be waiting for it.
+
+// The water in this example is Express's `request` object, and the magical spell
+// is just a function passed to `app.use`. Any function passed into `app.use`
+// will get run on every single request that your server receives
+
+// The order of middleware is defined matters quite a bit! Requests flow through
+// middleware functions in the order they are defined. This is useful because
+// many times  middleware function is responsible for modifying the `request`
+// object in some way so that the next middleware function (or route handler)
+// has access to whatever the previous one just did.
+
+// Middleware is useful when you want to do something for every request
+// that hits your server. Logging and parsing are two operations
+// commonly found in a middleware stack.
 
 module.exports = function (app, express) {
-  // Express 4 allows us to use multiple routers with their own configurations
-  var userRouter = express.Router();
-  var linkRouter = express.Router();
-
   app.use(morgan('dev'));
   app.use(bodyParser.urlencoded({extended: true}));
   app.use(bodyParser.json());
   app.use(express.static(__dirname + '/../../client'));
-
-
-  app.use('/api/users', userRouter); // use user router for all user request
-
-  // authentication middleware used to decode token and made available on the request
-  //app.use('/api/links', helpers.decode);
-  app.use('/api/links', linkRouter); // user link router for link request
-  app.use(helpers.errorLogger);
-  app.use(helpers.errorHandler);
-
-  // inject our routers into their respective route files
-  require('../users/userRoutes.js')(userRouter);
-  require('../links/linkRoutes.js')(linkRouter);
 };
