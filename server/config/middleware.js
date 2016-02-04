@@ -1,12 +1,11 @@
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 
-// Middleware can be thought of as a magical pipe that water flows through.
-// Each drop of water starts at the top opening of the pipe. As it falls through,
-// a magic spell is cast on it, and then it is spit out the bottom of the pipe
-// where another magical pipe could be waiting for it.
+// Middleware can be thought of as a pipe that water flows through.
+// Water starts at the top opening of the pipe, gets transformed as it falls through,
+// and then it is spit out the bottom of the pipe where another pipe could be waiting for it.
 
-// The water in this example is Express's `request` object, and the magical spell
+// The water in this example is Express's `request` object, and the transformation
 // is just a function passed to `app.use`. Any function passed into `app.use`
 // will get run on every single request that your server receives
 

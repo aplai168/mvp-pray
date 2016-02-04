@@ -1,7 +1,12 @@
 'use strict';
 
 describe('ShortenController', function () {
-  var $scope, $rootScope, $location, createController, $httpBackend, Links;
+  var $scope;
+  var $rootScope;
+  var $location;
+  var createController;
+  var $httpBackend;
+  var Links;
 
   // using angular mocks, we can inject the injector
   // to retrieve our dependencies
@@ -43,7 +48,7 @@ describe('ShortenController', function () {
   });
 
   it('should be able to create new links with addLink()', function () {
-    $httpBackend.expectPOST("/api/links").respond(201, '');
+    $httpBackend.expectPOST('/api/links').respond(201, '');
     $scope.addLink();
     $httpBackend.flush();
   });

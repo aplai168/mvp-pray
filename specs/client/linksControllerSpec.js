@@ -1,7 +1,11 @@
 'use strict';
 
 describe('LinksController', function () {
-  var $scope, $rootScope, createController, Links, $httpBackend;
+  var $scope;
+  var $rootScope;
+  var createController;
+  var Links;
+  var $httpBackend;
 
   // using angular mocks, we can inject the injector
   // to retrieve our dependencies
@@ -42,7 +46,7 @@ describe('LinksController', function () {
   });
 
   it('should populate the data property after the call to `Links.getAll()`', function () {
-    var mockLinks = [{},{},{}];
+    var mockLinks = [{}, {}, {}];
     $httpBackend.expectGET('/api/links').respond(mockLinks);
 
     createController();
