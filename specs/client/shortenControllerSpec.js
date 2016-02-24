@@ -1,12 +1,7 @@
 'use strict';
 
 describe('ShortenController', function () {
-  var $scope;
-  var $rootScope;
-  var $location;
-  var createController;
-  var $httpBackend;
-  var Links;
+  var $scope, $rootScope, $location, createController, $httpBackend, Links;
 
   // using angular mocks, we can inject the injector
   // to retrieve our dependencies

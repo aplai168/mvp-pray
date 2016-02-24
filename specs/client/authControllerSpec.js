@@ -1,13 +1,7 @@
 'use strict';
 
 describe('AuthController', function () {
-  var $scope;
-  var $rootScope;
-  var $location;
-  var $window;
-  var $httpBackend;
-  var createController;
-  var Auth;
+  var $scope, $rootScope, $location, $window, $httpBackend, createController, Auth;
 
   // using angular mocks, we can inject the injector
   // to retrieve our dependencies

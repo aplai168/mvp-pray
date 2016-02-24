@@ -10,8 +10,7 @@ describe('Services', function () {
 
 
   describe('Links Factory', function () {
-    var $httpBackend;
-    var Links;
+    var $httpBackend, Links;
 
     beforeEach(inject(function (_$httpBackend_, _Links_) {
       $httpBackend = _$httpBackend_;
