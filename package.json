@@ -13,9 +13,9 @@
   "scripts": {
     "test": "gulp karma",
     "start": "gulp",
-    "lint": "jscs ./"
+    "postinstall": "bash pomander.sh",
+    "lint": "eslint ./"
   },
-  "pre-commit": "lint",
   "repository": {
     "type": "git",
     "url": "http://github.com/hackreactor-labs/sprint.shortly-angular.git"
@@ -29,6 +29,7 @@
     "browser-sync": "^1.5.7",
     "chai": "^3.4.1",
     "clone-stats": "0.0.1",
+    "eslint-config-hackreactor": "git://github.com/hackreactor-labs/eslint-config-hackreactor",
     "gulp": "^3.8.5",
     "gulp-nodemon": "^1.0.4",
     "gulp-shell": "^0.2.7",
@@ -40,7 +41,6 @@
     "karma-sinon": "^1.0.4",
     "karma-unicorn-reporter": "^0.1.4",
     "mocha": "^2.3.4",
-    "pre-commit": "^1.1.1",
     "sinon": "^1.17.2"
   },
   "dependencies": {

@@ -32,9 +32,6 @@ Gulp is a task runner that will make your life easier. So easy. You just tell it
 ## Express architecture
 Version 4 removes almost all dependencies on `connect`. Which means you'll have to manually install popular middleware like `body-parser`. All middleware can be found in `server/config/middlware.js` and all API endpoints can be found in `server/config/routes.js`.
 
-## Style guide enforcement
-[JSCS](http://jscs.info/) is a popular JavaScript code style linter. This repo contains a dotfile, `.jscsrc`, that configures JSCS to enforce the Hack Reactor style guide. Using the `pre-commit` npm module, this repo will run JSCS against the code in the repository, and fail the commit if there are any errors, or, any violations of the style guide. Commit your work frequently to prevent having to do too much clean up at once.
-
 ## What's in this repo?
 Skeleton Angular app
   * All the files and folders needed for your Angular app
@@ -49,7 +46,7 @@ Gulpfile
   * Instructions for running all your tasks
 
 ## Installing dependencies and Getting started
-* [ ] run `npm install -g gulp karma karma-cli nodemon jscs` global modules
+* [ ] run `npm install -g gulp karma karma-cli nodemon` global modules
 * [ ] run `npm install` all node dependencies are listed in the package.json
 * [ ] run `bower install` all client dependencies are listed in the bower.json*
 * [ ] in a separate tab in your terminal, run `mongod` to start mongo up

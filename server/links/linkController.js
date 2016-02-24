@@ -1,6 +1,6 @@
+var Q = require('q');
+var util = require('../config/utils.js');
 var Link = require('./linkModel.js');
-    Q = require('q');
-    util = require('../config/utils.js');
 
 // Promisify a few mongoose methods with the `q` promise library
 var findLink = Q.nbind(Link.findOne, Link);
@@ -10,13 +10,13 @@ var findAllLinks = Q.nbind(Link.find, Link);
 module.exports = {
 
   allLinks: function (req, res, next) {
-  findAllLinks({})
-    .then(function (links) {
-      res.json(links);
-    })
-    .fail(function (error) {
-      next(error);
-    });
+    findAllLinks({})
+      .then(function (links) {
+        res.json(links);
+      })
+      .fail(function (error) {
+        next(error);
+      });
   },
 
   newLink: function (req, res, next) {
@@ -38,7 +38,7 @@ module.exports = {
           var newLink = {
             url: url,
             visits: 0,
-            base_url: req.headers.origin,
+            baseUrl: req.headers.origin,
             title: title
           };
           return createLink(newLink);
