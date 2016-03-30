@@ -30,7 +30,7 @@
     "clone-stats": "0.0.1",
     "eslint-config-hackreactor": "git://github.com/hackreactor-labs/eslint-config-hackreactor",
     "gulp": "^3.8.5",
-    "gulp-nodemon": "^1.0.4",
+    "gulp-nodemon": "^2.0.6",
     "gulp-shell": "^0.5.2",
     "karma": "^0.13.15",
     "karma-chai": "^0.1.0",
