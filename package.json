@@ -25,7 +25,7 @@
     "request": "^2.36.0"
   },
   "devDependencies": {
-    "browser-sync": "^1.5.7",
+    "browser-sync": "^2.11.2",
     "chai": "^3.4.1",
     "clone-stats": "0.0.1",
     "eslint-config-hackreactor": "git://github.com/hackreactor-labs/eslint-config-hackreactor",
