@@ -1,9 +1,9 @@
 'use strict';
 
 var gulp = require('gulp');
-var sync = require('browser-sync');
 var nodemon = require('gulp-nodemon');
 var KarmaServer = require('karma').Server;
+var browserSync = require('browser-sync').create();
 
 // the paths to our app files
 var paths = {
@@ -18,11 +18,11 @@ var paths = {
 // client side code will automagically refresh your page
 // with the new changes
 gulp.task('start', ['serve'], function () {
-  sync({
+  browserSync.init({
     notify: true,
-    // address for server,
     injectChanges: true,
     files: paths.scripts.concat(paths.html, paths.styles),
+    // address for server
     proxy: 'localhost:8000'
   });
 });
