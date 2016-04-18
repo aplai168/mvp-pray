@@ -78,7 +78,7 @@ gulp.task('babel', ['clean'], function() {
 // Start a babel-node server using nodemon
 gulp.task('serve:es6', ['babel'], function () {
   nodemon({
-    exec: 'babel-node',
+    exec: 'babel-node --presets es2015',
     script: paths.server,
     ignore: 'node_modules/**/*.js'
   });
