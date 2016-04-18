@@ -1,8 +1,11 @@
 {
   "name": "shortly-angular",
-  "version": "0.0.0",
-  "authors": [],
-  "license": "MIT",
+  "version": "1.0.0",
+  "authors": [
+    "Hack Reactor <curriculum.team@hackreactor.com>"
+  ],
+  "license": "UNLICENSED",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
