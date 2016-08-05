@@ -5,10 +5,10 @@
 An open source framework maintained by Google and the community. Angular tries to make it easy to build single page applications by taking a very opinionated approach compared to other MVC's such as Backbone.
 
 ### Concepts covered in the sprint
-* Controllers & `$scope`
+* Controllers and `$scope`
 * Modules
-* Routing & multiple views
-* Factories & Services
+* Routing and multiple views
+* Factories and Services
 * Directives
 * Promises
 * Filters
@@ -78,6 +78,9 @@ Validations
 Sorting and filtering
   * [ ] Display the links on the listing page sorted by visit count
   * [ ] Add a live-search box that displays only the links that match the search criteria
+
+Tests
+  * [ ] Write at least 5 new tests that will assure future users that your application is working as expected
 
 ### Example
 
