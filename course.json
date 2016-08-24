@@ -9,8 +9,13 @@
   ],
 
   "phases": {
+
     "Sprint Solution": [
-      { "title": "Solution Code", "type": "download", "id": "solution", "folder": "code", "transform": ["problemify-solve"] }
+
+      { "title": "Solution Code", "type": "download", "id": "solution", "folder": "code", "transform": ["problemify-solve"] },
+
+      { "title": "Shortly Angular Solution Video", "type": "iframe", "src": "{{ LOCAL_VIDEO_IP }}/a2b89c99b42273c1bca3472c30ca4f568c880a20" }
+
     ]
   }
 }
