@@ -2,13 +2,14 @@
   "name": "Shortly Angular",
   "description": "Continue your Short.ly adventure using advanced full stack techniques and the opinionated Angular framework.",
 
-  "syllabus": [
-
-    { "title": "Shortly Angular Repository", "type": "download", "id": "exercise", "folder": "code", "transform": ["problemify-export"] }
-
-  ],
-
   "phases": {
+
+    "Code": [
+
+      { "title": "Shortly Angular Repository", "type": "download", "id": "exercise", "folder": "code", "transform": ["problemify-export"] }
+
+    ],
+
 
     "Sprint Solution": [
 
