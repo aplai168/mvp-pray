@@ -37,7 +37,7 @@ Skeleton Angular app
   * All the files and folders needed for your Angular app
   * Tests for the controllers/services you'll build
 
-Express 4 sever
+Express 4 server
   * Connected to MongoDB using Mongoose
   * Removal of EJS templating and sessions
   * JWT for authentication
