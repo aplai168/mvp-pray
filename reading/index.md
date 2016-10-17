@@ -104,7 +104,7 @@ UI/UX
   * [ ] Incorporate [Material Design elements](https://material.angularjs.org/latest/) into your UI or create your own.
 
 Testing
-  * Write tests for the `Auth` service. Follow the existing structure outlined for the `Links` service test, and consult [this guide](http://angularclass.github.io/angular-testing-quick-start-guide/) for further guidance
+  * Write tests for the `Auth` service. Follow the existing structure outlined for the `Links` service test, and consult [this guide](http://angulartestingquickstart.com/) for further guidance
 
 ### Nightmare Mode
 Views
