@@ -17,6 +17,14 @@
 
       { "title": "Shortly Angular Solution Video", "type": "iframe", "src": "{{ LOCAL_VIDEO_IP }}/a2b89c99b42273c1bca3472c30ca4f568c880a20" }
 
+    ],
+
+    "Sprint Solution (Remote)": [
+
+      { "title": "Solution Code", "type": "download", "id": "solution-remote", "folder": "code", "transform": ["problemify-solve"] },
+
+      { "title": "Shortly Angular Solution Video", "type": "iframe", "src": "//player.vimeo.com/video/112551277" }
+
     ]
   }
 }
