@@ -4,6 +4,16 @@
 ## What exactly is Angular?
 An open source framework maintained by Google and the community. Angular tries to make it easy to build single page applications by taking a very opinionated approach compared to other MVC's such as Backbone.
 
+### Angular 1 vs. Angular 2:
+
+Angular 1 was released in 2009, and one of its big draws was a data-binding model that was very exciting, but also demanded a lot of an app's performance. The Google development team began developing solutions to try and fix some of these issues, and they ended up moving quite a distance from the original they had built, eventually announcing the new and improved Angular 2 in 2014.
+
+Angular 2 was intended not as a minor version upgrade, but a complete rewrite of Angular from the bottom up. As such, when Angular 2 Developer Preview and Beta were released in 2015, even developers who had been working in Angular 1 since its original release found Angular 2 so different from Angular 1 that they had to essentially learn Angular 2 as a new framework.
+
+The final release of Angular 2 was released in September 2016. Both because the finalized release is so new and because it takes a significant investment to learn Angular 2--even for seasoned Angular developers--many Angular 1 codebases have not yet been refactored to use Angular 2.
+
+The majority of Angular code you are likely to see in the immediate future will be Angular 1. As such, this sprint focuses on Angular 1. If you want to learn Angular 2 and be on the cutting edge of development, there are a few resources regarding the differences between the two in the reference portion.
+
 ### Concepts covered in the sprint
 * Controllers and `$scope`
 * Modules
@@ -134,3 +144,5 @@ Testing
 * [What is JWT](http://www.sitepoint.com/using-json-web-tokens-node-js/)
 * [Cookies vs JWT in Angular](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/)
 * [Intro to Gulp](http://markgoodyear.com/2014/01/getting-started-with-gulp/)
+* [Official docs on the philosophical differences between Angular 1 vs. Angular 2](http://blog.angular-university.io/introduction-to-angular2-the-main-goals/)
+* [Official quick reference of the implementation differences between Angular 1 vs. Angular 2](https://angular.io/docs/ts/latest/cookbook/a1-a2-quick-reference.html)
