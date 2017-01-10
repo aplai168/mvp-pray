@@ -6,7 +6,13 @@ An open source framework maintained by Google and the community. Angular tries t
 
 ### Angular 1 vs. Angular 2:
 
-Angular 1 was released in 2009, and one of its big draws was a data-binding model that was very exciting, but also demanded a lot of an app's performance. The Google development team began developing solutions to try and fix some of these issues, and they ended up moving quite a distance from the original they had built, eventually announcing the new and improved Angular 2 in 2014. Angular 2 was intended not as a standard software upgrade, but a complete rewrite of Angular from the bottom up. As such, when Angular 2 Developer Preview and Beta were released in 2015, even developers who had been working in Angular 1 since its original release found Angular 2 so different from Angular 1 that they had to essentially learn Angular 2 as a new framework. The final form of Angular 2 was then released in September 2016. Both because the finalized form is so new and because it takes a significant investment to learn Angular 2--even for seasoned Angular developers--many if not most Angular 1 codebases have not yet been refactored to use Angular 2, and the majority of Angular code you are likely to see in the immediate future will still be Angular 1. As such, we focus here on Angular 1, but if you want to learn Angular 2 and be on the cutting edge of development, there are a few resources regarding the differences between the two in the reference portion.
+Angular 1 was released in 2009, and one of its big draws was a data-binding model that was very exciting, but also demanded a lot of an app's performance. The Google development team began developing solutions to try and fix some of these issues, and they ended up moving quite a distance from the original they had built, eventually announcing the new and improved Angular 2 in 2014.
+
+Angular 2 was intended not as a minor version upgrade, but a complete rewrite of Angular from the bottom up. As such, when Angular 2 Developer Preview and Beta were released in 2015, even developers who had been working in Angular 1 since its original release found Angular 2 so different from Angular 1 that they had to essentially learn Angular 2 as a new framework.
+
+The final release of Angular 2 was released in September 2016. Both because the finalized release is so new and because it takes a significant investment to learn Angular 2--even for seasoned Angular developers--many Angular 1 codebases have not yet been refactored to use Angular 2.
+
+The majority of Angular code you are likely to see in the immediate future will be Angular 1. As such, this sprint focuses on Angular 1. If you want to learn Angular 2 and be on the cutting edge of development, there are a few resources regarding the differences between the two in the reference portion.
 
 ### Concepts covered in the sprint
 * Controllers and `$scope`
